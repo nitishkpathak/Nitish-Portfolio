@@ -35,6 +35,14 @@
     }
 
 /* Hero Section */
+    /* Type-writter */
+     .typewriter {
+          color: #e6c3ff;
+          font-size: 1.5rem;
+          font-weight: 500;
+          height: 40px;
+        }
+
     /* Social Media */
     .social-links {
     display: flex;
