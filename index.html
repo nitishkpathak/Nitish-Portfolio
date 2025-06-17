@@ -70,9 +70,11 @@
             <h1 class="display-4 fw-bold mb-3 hero-name">
             Hi, I'm <span class="text-gradient">Nitish Pathak</span>
             </h1>
-            <p class="lead mb-4 hero-profession fw-semibold" style="font-size: 1.5rem;">
+<!--             <p class="lead mb-4 hero-profession fw-semibold" style="font-size: 1.5rem;">
             Full Stack Web Developer & Tech Enthusiast
-            </p>
+            </p> -->
+            <div class="typewriter" id="typewriter-text"></div>
+          
             <p class="mb-4 hero-tagline fst-italic" style="font-size: 1.2rem; max-width: 500px;">
             I specialize in crafting seamless, responsive, and scalable web solutions using Java, React, and modern technologies. Let’s build something amazing together.
             </p>
@@ -510,6 +512,36 @@
 
 <script>
   AOS.init({ duration: 1000, once: true });
+
+  // Hero-section -> type writter
+  const texts = [
+      "Full Stack Web Developer",
+      "Java Enthusiast",
+      "Tech Explorer",
+      "React & UI/UX Learner"
+    ];
+
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    (function type() {
+      if (count === texts.length) {
+        count = 0;
+      }
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+
+      document.getElementById('typewriter-text').textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500); // pause before next text
+      } else {
+        setTimeout(type, 100); // typing speed
+      }
+    })();
 
 //   Skills
  document.addEventListener('DOMContentLoaded', () => {
