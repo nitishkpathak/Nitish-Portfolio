@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Nitish Pathak - Passionate Full Stack Web Developer. Explore my professional portfolio, skills, projects, and journey." />
+    <title>Nitish Pathak | Premium Portfolio</title>
+    <!-- Preload Hero Image for LCP -->
+    <link rel="preload" as="image" href="Remove%20background%20project.png">
+    <!-- Preconnect to CDNs for faster DNS resolution -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Remove%20background%20project.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg glass-nav sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-gradient-primary fw-bold" href="#">Nitish.</a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto align-items-start align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"> Portfolio <i
+                                class="fas fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                        <ul class="dropdown-menu glass-dropdown">
+                            <li><a class="dropdown-item" href="#projects"><i
+                                        class="fa-solid fa-folder-open me-2"></i>Projects</a></li>
+                            <li><a class="dropdown-item" href="#experience"><i
+                                        class="fa-solid fa-briefcase me-2"></i>Experience</a></li>
+                            <li><a class="dropdown-item" href="#skills"><i class="fa-solid fa-code me-2"></i>Skills</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"> Credentials <i
+                                class="fas fa-chevron-down ms-1" style="font-size: 0.75rem;"></i></a>
+                        <ul class="dropdown-menu glass-dropdown">
+                            <li><a class="dropdown-item" href="#education"><i
+                                        class="fa-solid fa-graduation-cap me-2"></i>Education</a></li>
+                            <li><a class="dropdown-item" href="#certificates"><i
+                                        class="fa-solid fa-certificate me-2"></i>Certifications</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li
+                        class="nav-item ms-lg-2 mt-3 mt-lg-0 pt-3 pt-lg-0 border-top border-secondary border-opacity-25 border-lg-0">
+                        <button
+                            class="theme-toggle-btn position-relative w-100 justify-content-start justify-content-lg-center"
+                            id="themeToggle" aria-label="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                            <span class="ms-3 d-lg-none fw-medium" id="themeTextMobile">Switch to Light Mode</span>
+                            <span class="custom-tooltip d-none d-lg-block">Switch to Light Mode</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container relative-z">
+            <div class="row align-items-center min-vh-90">
+                <div class="col-lg-7 text-center text-lg-start mb-5 mb-lg-0" data-aos="fade-right">
+                    <h1 class="display-3 fw-bold mb-3 hero-name text-body">
+                        Hi, I'm <br /><span class="text-gradient-primary">Nitish Pathak</span>
+                    </h1>
+                    <div class="typewriter-container mb-4">
+                        <span class="fs-4 fw-medium text-body-secondary" id="typewriter-text"></span><span
+                            class="cursor">|</span>
+                    </div>
+                    <p class="mb-5 text-body-secondary fs-5" style="max-width: 600px;">
+                        I specialize in crafting seamless, responsive, and scalable web solutions using Java, React, and
+                        modern technologies. Let’s build something amazing together.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="Nitish CV.pdf" class="btn btn-glow-primary px-4 py-3 rounded-pill" download>
+                            <i class="fas fa-download me-2"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-glass px-4 py-3 rounded-pill">
+                            Get in Touch <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                    <!-- Social Media Tooltips -->
+                    <div class="social-links mt-5">
+                        <a href="https://www.linkedin.com/in/nitishkpathak/" target="_blank" class="glass-icon"
+                            aria-label="LinkedIn Profile" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/nitishkpathak" target="_blank" class="glass-icon"
+                            aria-label="GitHub Repositories" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="GitHub Repositories"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/Mr_Zack_Nitish" target="_blank" class="glass-icon"
+                            aria-label="Twitter Profile" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Twitter / X Profile"><i class="fab fa-twitter"></i></a>
+                        <a href="https://leetcode.com/u/nitish_codes/" target="_blank" class="glass-icon leetcode-icon"
+                            aria-label="LeetCode Profile" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="LeetCode Profile">
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="hero-image-container position-relative">
+                        <div class="image-glow"></div>
+                        <img src="Remove%20background%20project.png" alt="Nitish Kumar" class="hero-image img-fluid"
+                            width="350" height="350" fetchpriority="high" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-section relative-z">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gradient-secondary fw-bold text-uppercase tracking-wide">Discover</h6>
+                <h2 class="display-5 fw-bold text-body mb-4">About Me</h2>
+                <div class="heading-line mx-auto"></div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image-wrapper position-relative text-center">
+                        <img src="Remove%20background%20project.png" alt="Nitish Pathak" class="about-image img-fluid"
+                            loading="lazy" width="380" height="380" decoding="async" />
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1" data-aos="fade-left">
+                    <h3 class="fw-bold text-body mb-3">Passionate Software Engineer</h3>
+                    <p class="text-body-secondary fs-5 mb-4">
+                        I'm <strong class="text-info">Nitish Pathak</strong>, a driven and enthusiastic Full Stack Web
+                        Developer. Currently pursuing my <b>Master of Computer Applications (MCA)</b> at Lovely
+                        Professional University, I have built a strong foundation in modern web technologies and
+                        software architecture.
+                    </p>
+                    <p class="text-body-secondary mb-4">
+                        My journey in tech is fueled by a relentless curiosity and a desire to solve complex, real-world
+                        problems through clean, efficient code. I don't just write scripts; I architect scalable
+                        solutions that prioritize user experience and performance. Whether it's designing an intuitive
+                        frontend with React or architecting a robust backend with Java and Node.js, I approach every
+                        project with meticulous attention to detail.
+                    </p>
+                    <p class="text-body-secondary mb-5">
+                        Beyond coding, I am a continuous learner who actively explores new frameworks, system design
+                        concepts, and industry best practices to stay ahead of the curve.
+                    </p>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-6">
+                            <div class="glass-panel p-4 rounded-4 d-flex align-items-center h-100 hover-lift">
+                                <div class="icon-box bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 50px; height: 50px;">
+                                    <i class="fas fa-graduation-cap fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-body mb-0 fw-bold">MCA</h5>
+                                    <span class="text-body-secondary small">LPU Student</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-panel p-4 rounded-4 d-flex align-items-center h-100 hover-lift">
+                                <div class="icon-box bg-gradient-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                    style="width: 50px; height: 50px;">
+                                    <i class="fas fa-rocket fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-body mb-0 fw-bold">Innovator</h5>
+                                    <span class="text-body-secondary small">Problem Solver</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services (What I Do) - NEW SECTION -->
+    <section id="services" class="py-section relative-z">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gradient-secondary fw-bold text-uppercase tracking-wide">Expertise</h6>
+                <h2 class="display-5 fw-bold text-body mb-4">What I Do</h2>
+                <div class="heading-line mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-panel p-5 rounded-4 h-100 text-center hover-lift">
+                        <div class="icon-box bg-gradient-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-code fs-1"></i>
+                        </div>
+                        <h4 class="text-body fw-bold mb-3">Frontend Development</h4>
+                        <p class="text-body-secondary">
+                            Crafting beautiful, highly responsive, and interactive user interfaces using modern
+                            frameworks like React, HTML5, CSS3, and Bootstrap.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-panel p-5 rounded-4 h-100 text-center hover-lift">
+                        <div class="icon-box bg-gradient-secondary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-server fs-1"></i>
+                        </div>
+                        <h4 class="text-body fw-bold mb-3">Backend Architecture</h4>
+                        <p class="text-body-secondary">
+                            Building secure, scalable, and robust server-side applications and RESTful APIs using Java,
+                            Node.js, Express, and SQL/NoSQL databases.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-panel p-5 rounded-4 h-100 text-center hover-lift">
+                        <div class="icon-box bg-gradient-tertiary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-pen-ruler fs-1"></i>
+                        </div>
+                        <h4 class="text-body fw-bold mb-3">UI/UX & System Design</h4>
+                        <p class="text-body-secondary">
+                            Focusing on user-centric design principles and planning efficient database schemas and
+                            system architectures for complete full-stack solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-section relative-z">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gradient-secondary fw-bold text-uppercase tracking-wide">Portfolio</h6>
+                <h2 class="display-5 fw-bold text-body mb-4">Featured Projects</h2>
+                <div class="heading-line mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card glass-panel h-100 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper"
+                            style="background: linear-gradient(45deg, #1e293b, #0f172a); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-calendar-check fs-1 text-primary"></i>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="#" target="_blank" class="btn btn-glow-primary rounded-circle p-3"
+                                    aria-label="View Timetable Project"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="custom-badge text-info rounded-pill">React.js</span>
+                                <span class="custom-badge text-success rounded-pill">Node.js</span>
+                                <span class="custom-badge text-warning rounded-pill">MongoDB</span>
+                            </div>
+                            <h4 class="text-body fw-bold mb-3 fs-5">Timetable Management System</h4>
+                            <p class="text-body-secondary small">
+                                Constructed an automated scheduling solution with well-organized data structure and
+                                role-based accessibility. Resolved timing overlaps and ensured smooth timetable
+                                management for all users.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card glass-panel h-100 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="LearnX.png" class="img-fluid" alt="E-Learning" loading="lazy" decoding="async">
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="https://nitishkpathak.github.io/LearnX/" target="_blank"
+                                    class="btn btn-glow-primary rounded-circle p-3" aria-label="View LearnX Project"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="custom-badge text-orange rounded-pill">HTML/CSS</span>
+                                <span class="custom-badge text-warning rounded-pill">JavaScript</span>
+                                <span class="custom-badge text-purple rounded-pill">Bootstrap</span>
+                            </div>
+                            <h4 class="text-body fw-bold mb-3 fs-5">LearnX – E-learning Website</h4>
+                            <p class="text-body-secondary small">
+                                Designed an intuitive e-learning platform interface. Structured a mobile-first layout
+                                with clear navigation flow and visually balanced components. Maintained uniform
+                                experience across multiple screen sizes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card glass-panel h-100 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="Fintech Bridge.png" class="img-fluid" alt="FinTech App" loading="lazy"
+                                decoding="async">
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="#" target="_blank" class="btn btn-glow-primary rounded-circle p-3"
+                                    aria-label="View Fintech Bridge Project"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="custom-badge text-danger rounded-pill">Java Swing</span>
+                                <span class="custom-badge text-primary rounded-pill">SQL Server</span>
+                                <span class="custom-badge text-info rounded-pill">JDBC</span>
+                            </div>
+                            <h4 class="text-body fw-bold mb-3 fs-5">FinTech Bridge: Banking App</h4>
+                            <p class="text-body-secondary small">
+                                Engineered a desktop-based banking system. Integrated graphical interface with backend
+                                processing while handling transaction-related data efficiently. Achieved stable
+                                execution and seamless communication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-section relative-z">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gradient-secondary fw-bold text-uppercase tracking-wide">Journey</h6>
+                <h2 class="display-5 fw-bold text-body mb-4">Experience</h2>
+                <div class="heading-line mx-auto"></div>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot bg-gradient-primary"></div>
+                    <div class="timeline-content glass-panel p-4 p-lg-5 rounded-4 hover-lift">
+                        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap">
+                            <h4 class="text-body fw-bold mb-0">Frontend Development Intern</h4>
+                            <span class="badge bg-info-subtle text-info px-3 py-2 rounded-pill mt-2 mt-sm-0">Feb 2024 –
+                                May 2024</span>
+                        </div>
+                        <h6 class="text-gradient-secondary mb-4 fs-5">Appwars Technologies</h6>
+                        <ul class="text-body-secondary mb-0 fs-6 ps-3">
+                            <li class="mb-3">Created 10+ highly responsive UI components, improving overall user
+                                engagement metrics by 20%.</li>
+                            <li class="mb-3">Built and documented reusable interface elements, reducing front-end
+                                development time for future features by 15%.</li>
+                            <li>Optimized layouts and media queries to ensure pixel-perfect responsiveness across 5+
+                                device types and screen sizes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-section relative-z">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gradient-secondary fw-bold text-uppercase tracking-wide">Expertise</h6>
+                <h2 class="display-5 fw-bold text-body mb-4">My Skills</h2>
+                <div class="heading-line mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Frontend -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-panel p-4 p-lg-5 rounded-4 h-100">
+                        <h3 class="text-body fw-bold mb-4 d-flex align-items-center">
+                            <i class="fa-solid fa-laptop-code text-info me-3"></i> Frontend & Core
+                        </h3>
+                        <div class="d-flex flex-wrap gap-3">
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-html5 text-orange fs-4"></i> <span
+                                    class="text-body fw-medium">HTML & CSS</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-js text-warning fs-4"></i> <span
+                                    class="text-body fw-medium">JavaScript</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-react text-info fs-4"></i> <span
+                                    class="text-body fw-medium">React.js</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-bootstrap text-purple fs-4"></i> <span
+                                    class="text-body fw-medium">Bootstrap</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-java text-danger fs-4"></i> <span
+                                    class="text-body fw-medium">Java</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-solid fa-diagram-project text-teal fs-4"></i> <span
+                                    class="text-body fw-medium">DSA & OOP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend, DB & Tools -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-panel p-4 p-lg-5 rounded-4 h-100">
+                        <h3 class="text-body fw-bold mb-4 d-flex align-items-center">
+                            <i class="fa-solid fa-server text-purple me-3"></i> Backend & Tools
+                        </h3>
+                        <div class="d-flex flex-wrap gap-3">
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-node-js text-success fs-4"></i> <span
+                                    class="text-body fw-medium">Node.js & Express</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-solid fa-network-wired text-info fs-4"></i> <span
+                                    class="text-body fw-medium">REST APIs</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-solid fa-leaf text-success fs-4"></i> <span
+                                    class="text-body fw-medium">MongoDB & MySQL</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-brands fa-git-alt text-orange fs-4"></i> <span
+                                    class="text-body fw-medium">Git & GitHub</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-solid fa-code text-primary fs-4"></i> <span class="text-body fw-medium">VS
+                                    Code & Postman</span>
+                            </div>
+                            <div
+                                class="skill-pill glass-panel px-4 py-3 rounded-pill d-flex align-items-center gap-2 hover-lift">
+                                <i class="fa-solid fa-database text-secondary fs-4"></i> <span
+                                    class="text-body fw-medium">DBMS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certificates -->
+    <section class="py-section relative-z">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Education -->
+                <div class="col-12" id="education" data-aos="fade-up">
+                    <h3 class="display-6 fw-bold text-body mb-4 text-center">Education</h3>
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="glass-panel p-4 p-lg-5 rounded-4 h-100 hover-lift">
+                                <div class="d-flex flex-column align-items-center text-center gap-3">
+                                    <div class="edu-icon bg-gradient-primary rounded-circle d-flex align-items-center justify-content-center p-3 text-white shadow"
+                                        style="width: 70px; height: 70px;">
+                                        <i class="fas fa-graduation-cap fs-2"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-body fw-bold mb-2">MCA</h4>
+                                        <h6 class="text-info mb-2 fs-6">Lovely Professional University</h6>
+                                        <p class="text-body-secondary mb-0"><i class="fa-regular fa-calendar me-2"></i>
+                                            2024 - Present</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="glass-panel p-4 p-lg-5 rounded-4 h-100 hover-lift">
+                                <div class="d-flex flex-column align-items-center text-center gap-3">
+                                    <div class="edu-icon bg-gradient-secondary rounded-circle d-flex align-items-center justify-content-center p-3 text-white shadow"
+                                        style="width: 70px; height: 70px;">
+                                        <i class="fas fa-university fs-2"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-body fw-bold mb-2">BCA</h4>
+                                        <h6 class="text-info mb-2 fs-6">Gopal Narayan Singh University</h6>
+                                        <p class="text-body-secondary mb-0"><i class="fa-regular fa-calendar me-2"></i>
+                                            2021 - 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="glass-panel p-4 p-lg-5 rounded-4 h-100 hover-lift">
+                                <div class="d-flex flex-column align-items-center text-center gap-3">
+                                    <div class="edu-icon bg-gradient-tertiary rounded-circle d-flex align-items-center justify-content-center p-3 text-white shadow"
+                                        style="width: 70px; height: 70px;">
+                                        <i class="fas fa-school fs-2"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-body fw-bold mb-2">Intermediate (Science)</h4>
+                                        <h6 class="text-info mb-2 fs-6">R K + 2 Rahmania High School</h6>
+                                        <p class="text-body-secondary mb-0"><i class="fa-regular fa-calendar me-2"></i>
+                                            2019 - 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-5">
+                    <hr class="border-secondary opacity-25">
+                </div>
+
+                <!-- Certificates -->
+                <div class="col-12" id="certificates" data-aos="fade-up">
+                    <h3 class="display-6 fw-bold text-body mb-5 text-center mt-3">Certifications</h3>
+                    <div class="row g-4">
+                        <!-- Cert 1 -->
+                        <div class="col-lg-6">
+                            <div
+                                class="glass-panel p-4 rounded-4 h-100 d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 hover-lift">
+                                <div class="cert-img-wrapper rounded-circle bg-body-tertiary d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa-solid fa-code text-body fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 text-center text-sm-start">
+                                    <h5 class="text-body fw-bold mb-1">DSA with Java</h5>
+                                    <p class="text-body-secondary mb-0 small">Apna College • Oct 2025</p>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-sm btn-outline-info rounded-pill px-4 py-2 mt-3 mt-sm-0 shadow-sm mx-auto mx-sm-0 ms-sm-auto w-100 w-sm-auto"
+                                    target="_blank" style="min-width: 140px;">View Certificate</a>
+                            </div>
+                        </div>
+                        <!-- Cert 2 -->
+                        <div class="col-lg-6">
+                            <div
+                                class="glass-panel p-4 rounded-4 h-100 d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 hover-lift">
+                                <div class="cert-img-wrapper rounded-circle bg-body-tertiary d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa-solid fa-laptop-code text-primary fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 text-center text-sm-start">
+                                    <h5 class="text-body fw-bold mb-1">Full Stack Web Development</h5>
+                                    <p class="text-body-secondary mb-0 small">Apna College • May 2025</p>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-sm btn-outline-info rounded-pill px-4 py-2 mt-3 mt-sm-0 shadow-sm mx-auto mx-sm-0 ms-sm-auto w-100 w-sm-auto"
+                                    target="_blank" style="min-width: 140px;">View Certificate</a>
+                            </div>
+                        </div>
+                        <!-- Cert 3 -->
+                        <div class="col-lg-6">
+                            <div
+                                class="glass-panel p-4 rounded-4 h-100 d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 hover-lift">
+                                <div class="cert-img-wrapper rounded-3 overflow-hidden flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <img src="https://appwarstechnologies.com/wp-content/uploads/2022/12/appwars-logo.webp"
+                                        class="w-100 h-100 object-fit-cover" alt="Appwars" loading="lazy" width="60"
+                                        height="60">
+                                </div>
+                                <div class="flex-grow-1 text-center text-sm-start">
+                                    <h5 class="text-body fw-bold mb-1">Frontend Developer Internship</h5>
+                                    <p class="text-body-secondary mb-0 small">Appwars Technologies • May 2024</p>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-sm btn-outline-info rounded-pill px-4 py-2 mt-3 mt-sm-0 shadow-sm mx-auto mx-sm-0 ms-sm-auto w-100 w-sm-auto"
+                                    target="_blank" style="min-width: 140px;">View Certificate</a>
+                            </div>
+                        </div>
+                        <!-- Cert 4 -->
+                        <div class="col-lg-6">
+                            <div
+                                class="glass-panel p-4 rounded-4 h-100 d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 hover-lift">
+                                <div class="cert-img-wrapper rounded-3 overflow-hidden flex-shrink-0"
+                                    style="width: 60px; height: 60px; background: white; padding: 4px;">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5uX7TvbnN3lcnQ4TKk89fca52SYo2A6Sa3Q&s"
+                                        class="w-100 h-100 object-fit-cover" alt="TCS" loading="lazy" width="60"
+                                        height="60">
+                                </div>
+                                <div class="flex-grow-1 text-center text-sm-start">
+                                    <h5 class="text-body fw-bold mb-1">TCS National Qualifier Test</h5>
+                                    <p class="text-body-secondary mb-0 small">Tata Consultancy Services • Oct 2023</p>
+                                </div>
+                                <a href="#"
+                                    class="btn btn-sm btn-outline-info rounded-pill px-4 py-2 mt-3 mt-sm-0 shadow-sm mx-auto mx-sm-0 ms-sm-auto w-100 w-sm-auto"
+                                    target="_blank" style="min-width: 140px;">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-section relative-z">
+        <div class="container">
+            <div class="glass-panel rounded-5 p-4 p-lg-5 mx-auto" style="max-width: 800px;" data-aos="zoom-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-body mb-2">Let's Work Together</h2>
+                    <p class="text-body-secondary">Have a project in mind or a job opportunity? Feel free to reach out.
+                    </p>
+                </div>
+
+                <form id="contactForm">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="form-floating glass-input-group">
+                                <input type="text" class="form-control glass-input" id="nameInput" placeholder="Name" name="name">
+                                <label for="nameInput">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating glass-input-group">
+                                <input type="email" class="form-control glass-input" id="emailInput" placeholder="Email" name="email">
+                                <label for="emailInput">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating glass-input-group">
+                                <textarea class="form-control glass-input" placeholder="Message" id="messageInput" name="message"
+                                    style="height: 150px"></textarea>
+                                <label for="messageInput">Your Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit"
+                                class="btn btn-glow-primary px-5 py-3 rounded-pill w-100 fw-bold fs-5">
+                                Send Message <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4 relative-z border-top border-secondary border-opacity-25 mt-5">
+        <div class="container">
+            <div class="row g-4 justify-content-between mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-gradient-primary fw-bold fs-3 mb-3 d-block" href="#">Nitish.</a>
+                    <p class="text-body-secondary mb-4">
+                        Full Stack Web Developer crafting innovative, high-performance web experiences with passion and
+                        precision.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.linkedin.com/in/nitishkpathak/" target="_blank"
+                            class="social-circle glass-panel text-body d-flex align-items-center justify-content-center p-3 rounded-circle"
+                            data-bs-toggle="tooltip" title="LinkedIn" aria-label="LinkedIn Profile"><i
+                                class="fab fa-linkedin-in fs-5"></i></a>
+                        <a href="https://github.com/nitishkpathak" target="_blank"
+                            class="social-circle glass-panel text-body d-flex align-items-center justify-content-center p-3 rounded-circle"
+                            data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub Profile"><i
+                                class="fab fa-github fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-body fw-bold mb-4">Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#home"
+                                class="text-body-secondary text-decoration-none hover-primary">Home</a></li>
+                        <li class="mb-2"><a href="#about"
+                                class="text-body-secondary text-decoration-none hover-primary">About</a></li>
+                        <li class="mb-2"><a href="#projects"
+                                class="text-body-secondary text-decoration-none hover-primary">Projects</a></li>
+                        <li class="mb-2"><a href="#skills"
+                                class="text-body-secondary text-decoration-none hover-primary">Skills</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h5 class="text-body fw-bold mb-4">Contact</h5>
+                    <ul class="list-unstyled text-body-secondary">
+                        <li class="mb-3 d-flex align-items-center gap-3">
+                            <i class="fas fa-envelope text-info"></i> npathak.sp@gmail.com
+                        </li>
+                        <li class="mb-3 d-flex align-items-center gap-3">
+                            <i class="fas fa-phone text-info"></i> +91 9693536377
+                        </li>
+                        <li class="mb-3 d-flex align-items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-info"></i> India
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center text-body-secondary pt-4 border-top border-secondary border-opacity-25">
+                <p class="mb-0">&copy; 2026 Nitish Pathak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top" data-bs-toggle="tooltip"
+        title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+
+    <script>
+        // Initialize everything on DOMContentLoaded to prevent render blocking issues
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                    easing: 'ease-out-cubic'
+                });
+            }
+
+            // Initialize Tooltips
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+
+            // Force page to scroll to top on refresh
+            if (history.scrollRestoration) {
+                history.scrollRestoration = 'manual';
+            }
+            window.scrollTo(0, 0);
+
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('themeToggle');
+            const htmlElement = document.documentElement;
+            const themeIcon = themeToggleBtn.querySelector('i');
+
+            // Check Local Storage
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            htmlElement.setAttribute('data-bs-theme', currentTheme);
+            updateThemeIcon(currentTheme);
+
+            themeToggleBtn.addEventListener('click', () => {
+                const newTheme = htmlElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+                htmlElement.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+                updateNavbar();
+            });
+
+            function updateNavbar() {
+                const nav = document.querySelector('.glass-nav');
+                const isDark = htmlElement.getAttribute('data-bs-theme') === 'dark';
+
+                if (window.scrollY > 50) {
+                    nav.style.background = isDark ? 'rgba(15, 23, 42, 0.95)' : 'rgba(255, 255, 255, 0.98)';
+                    nav.style.boxShadow = isDark ? '0 4px 30px rgba(0, 0, 0, 0.5)' : '0 4px 30px rgba(0, 0, 0, 0.08)';
+                } else {
+                    nav.style.background = isDark ? 'rgba(15, 23, 42, 0.5)' : 'rgba(255, 255, 255, 0.7)';
+                    nav.style.boxShadow = 'none';
+                }
+            }
+
+            // Initial setup for navbar
+            updateNavbar();
+
+            function updateThemeIcon(theme) {
+                const tooltipSpan = themeToggleBtn.querySelector('.custom-tooltip');
+                const mobileText = document.getElementById('themeTextMobile');
+                if (theme === 'dark') {
+                    themeIcon.className = 'fas fa-sun'; // Show sun in dark mode to toggle to light
+                    themeIcon.style.color = '#fcd34d'; // Yellow sun
+                    if (tooltipSpan) tooltipSpan.textContent = 'Switch to Light Mode';
+                    if (mobileText) mobileText.textContent = 'Switch to Light Mode';
+                } else {
+                    themeIcon.className = 'fas fa-moon'; // Show moon in light mode to toggle to dark
+                    themeIcon.style.color = '#475569'; // Dark moon
+                    if (tooltipSpan) tooltipSpan.textContent = 'Switch to Dark Mode';
+                    if (mobileText) mobileText.textContent = 'Switch to Dark Mode';
+                }
+            }
+
+            // Typewriter Effect
+            const texts = [
+                "Full Stack Developer",
+                "Java Specialist",
+                "React Enthusiast",
+                "Problem Solver"
+            ];
+            let count = 0;
+            let index = 0;
+            let currentText = '';
+            let letter = '';
+            let isDeleting = false;
+
+            (function type() {
+                if (count === texts.length) {
+                    count = 0;
+                }
+                currentText = texts[count];
+
+                if (isDeleting) {
+                    letter = currentText.slice(0, --index);
+                } else {
+                    letter = currentText.slice(0, ++index);
+                }
+
+                const typingElement = document.getElementById('typewriter-text');
+                if (typingElement) typingElement.textContent = letter;
+
+                let typeSpeed = 100;
+                if (isDeleting) typeSpeed = 50;
+
+                if (!isDeleting && letter.length === currentText.length) {
+                    isDeleting = true;
+                    typeSpeed = 2000; // pause at end
+                } else if (isDeleting && letter.length === 0) {
+                    isDeleting = false;
+                    count++;
+                    typeSpeed = 500; // pause before typing next
+                }
+
+                setTimeout(type, typeSpeed);
+            })();
+
+            // Navbar blur and Scroll To Top visibility on scroll
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                updateNavbar();
+
+                // Scroll to top button
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+
+            // Close mobile menu on link click and fix scroll position
+            const navLinksMobile = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+            const navbarCollapseDiv = document.getElementById('navbarNavDropdown');
+            navLinksMobile.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (navbarCollapseDiv.classList.contains('show')) {
+                        const targetId = link.getAttribute('href');
+
+                        // Only intercept if it's an anchor link on the same page
+                        if (targetId && targetId.startsWith('#')) {
+                            e.preventDefault();
+                            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseDiv);
+                            if (bsCollapse) {
+                                // Wait for menu to close before scrolling to prevent layout shift offset
+                                navbarCollapseDiv.addEventListener('hidden.bs.collapse', function onHidden() {
+                                    navbarCollapseDiv.removeEventListener('hidden.bs.collapse', onHidden);
+                                    const targetEl = document.querySelector(targetId);
+                                    if (targetEl) {
+                                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                });
+                                bsCollapse.hide();
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Scroll To Top Click
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            emailjs.init("t0hko6qmXDfjVglF2");
+
+                    document
+                    .getElementById("contactForm")
+                    .addEventListener("submit", function (e) {
+
+                        e.preventDefault();
+
+                        emailjs.sendForm(
+                        "service_86eoorq",
+                        "template_7lbur4y",
+                        this
+                        )
+
+                        .then(() => {
+
+                        alert("Message Sent Successfully!");
+
+                        this.reset();
+
+                        })
+
+                        .catch((error) => {
+
+                        alert("Failed To Send Message");
+
+                        console.log(error);
+
+                        });
+
+                    });
+        }); // End DOMContentLoaded
+    </script>
+</body>
+
+</html>
