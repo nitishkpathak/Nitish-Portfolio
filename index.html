@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -784,7 +784,7 @@
             const themeIcon = themeToggleBtn.querySelector('i');
 
             // Check Local Storage
-            const currentTheme = localStorage.getItem('theme') || 'dark';
+            const currentTheme = localStorage.getItem('theme') || 'light';
             htmlElement.setAttribute('data-bs-theme', currentTheme);
             updateThemeIcon(currentTheme);
 
