@@ -468,3 +468,79 @@ body {
 [data-bs-theme="dark"] .custom-toast .btn-close {
     filter: invert(1) grayscale(100%) brightness(200%);
 }
+
+/* Premium Enhancements CSS */
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), #8b5cf6);
+    z-index: 2050;
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* Interactive Background Canvas */
+#bg-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Custom Glow Cursor */
+.custom-cursor {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    transition-timing-function: cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+.custom-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+}
+@media (max-width: 991px) {
+    .custom-cursor, .custom-cursor-dot { display: none; }
+}
+
+/* Smooth Theme Transitions */
+body, .glass-panel, .glass-nav, .nav-link, .btn-glass, .btn-glow-primary, .theme-toggle-btn, .skill-pill, .timeline-content, .timeline-dot, .custom-badge, .glass-icon, .social-circle, .form-control {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Project Filter Animations */
+.project-card-wrapper {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    opacity: 1;
+}
+.project-card-wrapper.hide-card {
+    transform: scale(0.8);
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
