@@ -544,3 +544,18 @@ body, .glass-panel, .glass-nav, .nav-link, .btn-glass, .btn-glow-primary, .theme
     margin: 0 !important;
     border: none !important;
 }
+
+/* Footer micro-interactions */
+.footer-links a {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.footer-links a:hover {
+    color: var(--primary) !important;
+    transform: translateX(4px);
+}
+.footer-links a i {
+    transition: transform 0.3s ease;
+}
+.footer-links a:hover i {
+    transform: scale(1.2);
+}
