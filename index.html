@@ -2,6 +2,13 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
+    <script>
+        // Immediately set theme to prevent flashing (FOUC)
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
@@ -113,7 +120,7 @@
                         modern technologies. Let’s build something amazing together.
                     </p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="Nitish_Kumar_Pathak__Resume.pdf" class="btn btn-glow-primary px-4 py-3 rounded-pill" download>
+                        <a href="Nitish CV.pdf" class="btn btn-glow-primary px-4 py-3 rounded-pill" download>
                             <i class="fas fa-download me-2"></i> Download Resume
                         </a>
                         <a href="#contact" class="btn btn-glass px-4 py-3 rounded-pill">
@@ -360,6 +367,55 @@
                                 Engineered a desktop-based banking system. Integrated graphical interface with backend
                                 processing while handling transaction-related data efficiently. Achieved stable
                                 execution and seamless communication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: PrepTrack -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card glass-panel h-100 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper"
+                            style="background: linear-gradient(135deg, #1e1b4b, #312e81); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-chart-column fs-1 text-info animate-pulse"></i>
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="#" target="_blank" class="btn btn-glow-primary rounded-circle p-3"
+                                    aria-label="View PrepTrack Project"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="custom-badge text-info rounded-pill">MERN Stack</span>
+                                <span class="custom-badge text-success rounded-pill">JWT</span>
+                                <span class="custom-badge text-warning rounded-pill">Recharts</span>
+                            </div>
+                            <h4 class="text-body fw-bold mb-3 fs-5">PrepTrack – DSA Tracker</h4>
+                            <p class="text-body-secondary small">
+                                Engineered a MERN-stack application integrated with a web parser to automate coding question metadata extraction, reducing user manual logging time by 80%. Optimized client-side synchronization and designed interactive Recharts dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Invisible Disability -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card glass-panel h-100 rounded-4 overflow-hidden">
+                        <div class="project-img-wrapper">
+                            <img src="Invisible%20Disability.png" class="img-fluid" alt="Invisible Disability Awareness" loading="lazy" decoding="async">
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <a href="#" target="_blank" class="btn btn-glow-primary rounded-circle p-3"
+                                    aria-label="View Invisible Disability Project"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="custom-badge text-orange rounded-pill">HTML/CSS</span>
+                                <span class="custom-badge text-warning rounded-pill">JavaScript</span>
+                                <span class="custom-badge text-purple rounded-pill">Bootstrap</span>
+                            </div>
+                            <h4 class="text-body fw-bold mb-3 fs-5">Invisible Disability Portal</h4>
+                            <p class="text-body-secondary small">
+                                Built an interactive platform to raise awareness about non-visible disabilities. Designed an accessible interface following WCAG guidelines to ensure inclusive usability for all users.
                             </p>
                         </div>
                     </div>
@@ -738,7 +794,7 @@
             </div>
 
             <div class="text-center text-body-secondary pt-4 border-top border-secondary border-opacity-25">
-                <p class="mb-0">&copy; 2026 Nitish Pathak. All rights reserved.</p>
+                <p class="mb-0">&copy; <span id="currentYear"></span> Nitish Pathak. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -783,10 +839,8 @@
             const htmlElement = document.documentElement;
             const themeIcon = themeToggleBtn.querySelector('i');
 
-            // Check Local Storage
-            const currentTheme = localStorage.getItem('theme') || 'light';
-            htmlElement.setAttribute('data-bs-theme', currentTheme);
-            updateThemeIcon(currentTheme);
+            // Update theme icon visual state (theme is set immediately in head script)
+            updateThemeIcon(htmlElement.getAttribute('data-bs-theme'));
 
             themeToggleBtn.addEventListener('click', () => {
                 const newTheme = htmlElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
@@ -826,6 +880,12 @@
                     if (tooltipSpan) tooltipSpan.textContent = 'Switch to Dark Mode';
                     if (mobileText) mobileText.textContent = 'Switch to Dark Mode';
                 }
+            }
+
+            // Set dynamic copyright year
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
             }
 
             // Typewriter Effect
