@@ -296,9 +296,11 @@
                         <div class="project-img-wrapper"
                             style="background: linear-gradient(135deg, #1e1b4b, #312e81); display: flex; align-items: center; justify-content: center;">
                             <i class="fa-solid fa-chart-column fs-1 text-info animate-pulse"></i>
-                            <div class="project-overlay d-flex align-items-center justify-content-center">
-                                <a href="https://github.com/nitishkpathak/PrepTrack" target="_blank" class="btn btn-glow-primary rounded-circle p-3"
-                                    aria-label="View PrepTrack Project"><i class="fas fa-external-link-alt"></i></a>
+                            <div class="project-overlay d-flex align-items-center justify-content-center gap-3">
+                                <a href="https://prep-track-blue.vercel.app/" target="_blank" class="btn btn-glow-primary rounded-circle p-3"
+                                    aria-label="Live Demo" data-bs-toggle="tooltip" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/nitishkpathak/PrepTrack" target="_blank" class="btn btn-glass rounded-circle p-3 text-white border-white"
+                                    aria-label="GitHub Code" data-bs-toggle="tooltip" title="GitHub Code"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
@@ -981,37 +983,58 @@
 
             emailjs.init("t0hko6qmXDfjVglF2");
 
-                    document
-                    .getElementById("contactForm")
-                    .addEventListener("submit", function (e) {
+            // Initialize Toast
+            const toastEl = document.getElementById('contactToast');
+            const contactToast = new bootstrap.Toast(toastEl, { delay: 4000 });
 
-                        e.preventDefault();
+            function showToast(message, isSuccess) {
+                const toastMessage = document.getElementById('toastMessage');
+                const toastIcon = document.getElementById('toastIcon');
+                if (toastMessage) toastMessage.textContent = message;
+                if (toastIcon) {
+                    if (isSuccess) {
+                        toastIcon.className = 'fa-solid fa-circle-check text-success fs-5';
+                    } else {
+                        toastIcon.className = 'fa-solid fa-circle-xmark text-danger fs-5';
+                    }
+                }
+                contactToast.show();
+            }
 
-                        emailjs.sendForm(
+            document
+                .getElementById("contactForm")
+                .addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    emailjs.sendForm(
                         "service_86eoorq",
                         "template_7lbur4y",
                         this
-                        )
-
-                        .then(() => {
-
-                        alert("Message Sent Successfully!");
-
+                    )
+                    .then(() => {
+                        showToast("Message Sent Successfully!", true);
                         this.reset();
-
-                        })
-
-                        .catch((error) => {
-
-                        alert("Failed To Send Message");
-
+                    })
+                    .catch((error) => {
+                        showToast("Failed To Send Message. Please try again.", false);
                         console.log(error);
-
-                        });
-
                     });
+                });
         }); // End DOMContentLoaded
     </script>
+
+    <!-- Custom Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <div id="contactToast" class="toast align-items-center border-0 custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2 text-body">
+                    <i class="fa-solid fa-circle-check text-success fs-5" id="toastIcon"></i>
+                    <span id="toastMessage" class="fw-medium">Message Sent Successfully!</span>
+                </div>
+                <button type="button" class="btn-close ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
